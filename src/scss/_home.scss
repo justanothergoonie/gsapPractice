@@ -1,0 +1,49 @@
+body {
+	// @include flex-center;
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-around;
+	height: 250vh;
+}
+.box-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 15%;
+	// height: 75%;
+	.box {
+		@include flex-center;
+		width: 100px;
+		height: 100px;
+		&.a {
+			background-color: orange;
+		}
+		&.b {
+			background-color: blue;
+		}
+		&.ghost-holder {
+			.ghost1 {
+				z-index: 0;
+				background-color: grey;
+				position: absolute;
+			}
+			.ghost2 {
+				z-index: -1;
+				background-color: rgb(104, 103, 103);
+				position: absolute;
+			}
+			.ghost3 {
+				z-index: -2;
+				background-color: rgb(69, 69, 69);
+				position: absolute;
+			}
+			.c {
+				z-index: 1;
+				background-color: cyan;
+				// margin-top: 150vh;
+				// position: absolute;
+				// bottom: -1vh;
+			}
+		}
+	}
+}
